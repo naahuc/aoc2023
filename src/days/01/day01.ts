@@ -5,16 +5,22 @@ import { decodeStringNums } from "./decoder";
 export class Day01 {
   public static run() {
     const fr = new FileReader('01/input.txt');
-    const numbers: number[] = [];
+    const first: number[] = [];
+    const second: number[] = [];
 
     fr.addNewLineListener((line: string) => {
-      const lineNumber = decodeStringNums(line);
+      const numberFromLine = decodeStringNums(line, true);
+      if (numberFromLine) first.push(numberFromLine);
+    });
 
-      if (lineNumber) numbers.push(lineNumber);
+    fr.addNewLineListener((line: string) => {
+      const numberFromLine = decodeStringNums(line);
+      if (numberFromLine) second.push(numberFromLine);
     });
 
     fr.addCloseListener(() => {
-      console.log(getSum(numbers));
+      console.info(`First star: ${getSum(first)}`);
+      console.info(`Second star: ${getSum(second)}`);
     })
 
     fr.process();
