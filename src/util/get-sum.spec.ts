@@ -1,4 +1,3 @@
-import { exec } from "child_process";
 import { getSum } from "./get-sum";
 
 describe('getSum', () => {

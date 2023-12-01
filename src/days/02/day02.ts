@@ -5,6 +5,7 @@ export class Day02 {
     const fr = new FileReader('02/input.txt');
 
     fr.addNewLineListener((line: string) => {
+      line;
     });
 
     fr.addCloseListener(() => {

@@ -1,5 +1,6 @@
 import { Interface } from "readline/promises";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type ReadlineExecutor = (...args: any[]) => void;
 
 export class FileReader {
