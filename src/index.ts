@@ -5,7 +5,7 @@ import { Day02 } from "./days/02/day02";
 
 process.chdir(__dirname); // makes nodemon not bitch with paths
 
-let day = 1; // default day, should be current day
+let day = 2; // default day, should be current day
 
 // set up console args
 const commander = new Command();
