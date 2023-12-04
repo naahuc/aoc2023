@@ -1,11 +1,12 @@
 import { Command } from "commander";
 import { Day01 } from "./days/01/day01";
 import { Day02 } from "./days/02/day02";
+import { Day03 } from "./days/03/day03";
 
 
 process.chdir(__dirname); // makes nodemon not bitch with paths
 
-let day = 2; // default day, should be current day
+let day = 3; // default day, should be current day
 
 // set up console args
 const commander = new Command();
@@ -28,6 +29,9 @@ switch (day) {
     break;
   case 2:
     Day02.run();
+    break;
+  case 3:
+    Day03.run();
     break;
   default:
     console.log('Day is not done yet.');
